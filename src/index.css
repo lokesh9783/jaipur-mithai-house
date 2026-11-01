@@ -1,0 +1,245 @@
+/* ========================================================
+   JAIPUR MITHAI HOUSE — TRADITIONAL RAJASTHANI SWEETS
+   Traditional Saffron, Danedar Ghee & Terracotta Theme
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-kesar-primary: #D9480F;
+  --color-kesar-dark: #A63004;
+  --color-kesar-light: #FF922B;
+  --color-ghee-gold: #F59F00;
+  --color-ghee-light: #FFF3BF;
+  --color-pista-green: #2B8A3E;
+  --color-pista-light: #D3F9D8;
+  --color-terracotta: #3B1207;
+  --color-terracotta-dark: #200702;
+  --color-cream-bg: #FFFDF9;
+  --color-cream-card: #FFFFFF;
+  --color-cream-warm: #FFF5E6;
+  --color-border: #F3DEC9;
+  --color-border-subtle: #FBEBD9;
+  --color-text-main: #24140F;
+  --color-text-muted: #7A635B;
+
+  --font-heritage: 'Rozha One', serif;
+  --font-royal: 'Cinzel', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --shadow-sm: 0 2px 8px rgba(59, 18, 7, 0.06);
+  --shadow-md: 0 8px 24px rgba(59, 18, 7, 0.1);
+  --shadow-lg: 0 16px 40px rgba(59, 18, 7, 0.14);
+  --transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --radius-card: 14px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream-bg);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-kesar-primary);
+  border-radius: 4px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heritage);
+  color: var(--color-terracotta);
+  line-height: 1.25;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Demo Top Ribbon */
+.demo-top-ribbon {
+  background: linear-gradient(90deg, #3B1207, #7A210A, #3B1207);
+  color: #FFF3BF;
+  font-size: 0.76rem;
+  padding: 0.4rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+  z-index: 1001;
+  position: relative;
+}
+
+.demo-top-ribbon .badge {
+  background: var(--color-ghee-gold);
+  color: #200702;
+  padding: 0.12rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+}
+
+/* Buttons */
+.btn-kesar {
+  background: linear-gradient(135deg, #E8590C 0%, #D9480F 100%);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.03em;
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 16px rgba(217, 72, 15, 0.35);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-kesar:hover {
+  background: linear-gradient(135deg, #F76707 0%, #E8590C 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(217, 72, 15, 0.45);
+}
+
+.btn-outline-kesar {
+  background: #FFF;
+  color: var(--color-kesar-primary);
+  border: 1.5px solid var(--color-kesar-primary);
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-outline-kesar:hover {
+  background: var(--color-cream-warm);
+  transform: translateY(-2px);
+}
+
+/* Pure Vegetarian Dot Symbol */
+.veg-badge {
+  width: 17px;
+  height: 17px;
+  border: 1.5px solid #2B8A3E;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF;
+}
+.veg-badge::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2B8A3E;
+}
+
+/* Mithai Card */
+.mithai-card {
+  background: var(--color-cream-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.mithai-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-ghee-gold);
+}
+
+/* Section Header */
+.section-wrapper {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-royal);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-kesar-primary);
+  margin-bottom: 0.75rem;
+  padding: 0.3rem 0.9rem;
+  background: var(--color-cream-warm);
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.5vw, 2.9rem);
+  margin-bottom: 0.75rem;
+  color: var(--color-terracotta);
+}
+
+.section-subtitle {
+  font-size: 1.08rem;
+  color: var(--color-text-muted);
+  max-width: 650px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .section-wrapper {
+    padding: 3.5rem 0;
+  }
+}
+
